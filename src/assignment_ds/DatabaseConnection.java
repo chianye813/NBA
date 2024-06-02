@@ -1,13 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package assignment_ds;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.ResultSet;
+
 
 public class DatabaseConnection {
     private String url;
@@ -54,7 +51,8 @@ public class DatabaseConnection {
                                     "SUM(CASE WHEN Position='Guard' THEN 1 ELSE 0 END) AS Guards, " +
                                     "SUM(CASE WHEN Position='Forward' THEN 1 ELSE 0 END) AS Forwards, " +
                                     "SUM(CASE WHEN Position='Center' THEN 1 ELSE 0 END) AS Centers, " +
-                                    "SUM(Salary) AS TotalSalary " +
+                                    "SUM(Salary) AS TotalSalary, " +
+                                    "SUM(CASE WHEN Superstar='1' THEN 1 ELSE 0 END) AS TotalSuperstar " + 
                                 "FROM assignment2");
 
         return rs;

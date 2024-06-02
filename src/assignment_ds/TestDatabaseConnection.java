@@ -13,7 +13,7 @@ public class TestDatabaseConnection {
 
     public static void main(String[] args) {
         // Database connection parameters
-        String url = "jdbc:mysql://localhost:3308/assignment2";
+        String url = "jdbc:mysql://localhost:3307/nba";
         String username = "root";
         String password = "";
         try {
